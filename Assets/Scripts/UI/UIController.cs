@@ -17,7 +17,7 @@ public class UIController : MonoBehaviour
 
     public void ToggleInventoryPanel(bool open)
     {
-        _inventoryUI.SetActive(open);
+       // _inventoryUI.SetActive(open);
         _inGameUI.SetActive(!open);
     }
 
@@ -27,7 +27,7 @@ public class UIController : MonoBehaviour
 
         if (open)
         {
-            _inventoryUI.SetActive(false);
+            //_inventoryUI.SetActive(false);
             _inGameUI.SetActive(false);
         }
 
