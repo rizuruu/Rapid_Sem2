@@ -1,7 +1,4 @@
-namespace TheProphecy.Interfaces
+public interface ISkill
 {
-    public interface ISkill
-    {
-        public float GetCooldownPercentage();
-    }
+    public float GetCooldownPercentage();
 }

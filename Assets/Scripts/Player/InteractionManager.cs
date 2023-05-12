@@ -1,57 +1,52 @@
 using UnityEngine;
-using TheProphecy.Interfaces;
 
-namespace TheProphecy.Interactions
+public class InteractionManager : MonoBehaviour
 {
-    public class InteractionManager : MonoBehaviour
+    [SerializeField] private int _rayLength = 20;
+    [SerializeField] private LayerMask _interactableLayer;
+
+    private Camera _mainCamera;
+    private Touch _touch;
+    private Vector2 _touchStartPos;
+    private Ray _ray;
+    private RaycastHit2D _hit;
+
+    private void Start()
     {
-        [SerializeField] private int _rayLength = 20;
-        [SerializeField] private LayerMask _interactableLayer;
+        _mainCamera = Camera.main;
+    }
 
-        private Camera _mainCamera;
-        private Touch _touch;
-        private Vector2 _touchStartPos;
-        private Ray _ray;
-        private RaycastHit2D _hit;
+    private void Update()
+    {
+        InteractWithTouch();
+    }
 
-        private void Start()
+    private void InteractWithTouch()
+    {
+        if (Input.touchCount > 0)
         {
-            _mainCamera = Camera.main;
-        }
 
-        private void Update()
-        {
-            InteractWithTouch();
-        }
-
-        private void InteractWithTouch()
-        {
-            if (Input.touchCount > 0)
+            _touch = Input.GetTouch(0);
+            if (_touch.phase == TouchPhase.Began)
             {
+                _touchStartPos = _touch.position;
+                _ray = _mainCamera.ScreenPointToRay(_touchStartPos);
 
-                _touch = Input.GetTouch(0);
-                if (_touch.phase == TouchPhase.Began)
+                if (_hit = Physics2D.Raycast(_ray.origin, _ray.direction, _rayLength, _interactableLayer))
                 {
-                    _touchStartPos = _touch.position;
-                    _ray = _mainCamera.ScreenPointToRay(_touchStartPos);
+                    IInteractable interactable = _hit.collider.GetComponent<IInteractable>();
 
-                    if (_hit = Physics2D.Raycast(_ray.origin, _ray.direction, _rayLength, _interactableLayer))
+                    if (interactable != null)
                     {
-                        IInteractable interactable = _hit.collider.GetComponent<IInteractable>();
-
-                        if (interactable != null)
-                        {
-                            interactable.OnInteract();
-                        }
+                        interactable.OnInteract();
                     }
-
                 }
-            }
-        }
 
-        private void OnTriggerEnter2D(Collider2D collision)
-        {
+            }
         }
     }
 
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+    }
 }

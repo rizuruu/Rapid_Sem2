@@ -1,30 +1,25 @@
 using System.Collections;
 using System.Collections.Generic;
-using TheProphecy.Map.PathFinding;
 using UnityEngine;
 
-namespace TheProphecy.Map.DungeonGeneration
+public abstract class AbstractDungeonGenerator : MonoBehaviour
 {
-    public abstract class AbstractDungeonGenerator : MonoBehaviour
+    [SerializeField] protected TilemapVisualizer tilemapVisualizer = null;
+    [SerializeField] protected Vector2Int startPosition = Vector2Int.zero;
+
+    public PathfindingGrid grid;
+
+    public void GenerateDungeon()
     {
-        [SerializeField] protected TilemapVisualizer tilemapVisualizer = null;
-        [SerializeField] protected Vector2Int startPosition = Vector2Int.zero;
+        tilemapVisualizer.Clear();
+        RunProceduralGeneration();
 
-        public PathfindingGrid grid;
-
-        public void GenerateDungeon()
+        if (grid)
         {
-            tilemapVisualizer.Clear();
-            RunProceduralGeneration();
-
-            if (grid)
-            {
-                StartCoroutine(grid.UpdateGrid());
-            }
-
+            StartCoroutine(grid.UpdateGrid());
         }
 
-        protected abstract void RunProceduralGeneration();
     }
-}
 
+    protected abstract void RunProceduralGeneration();
+}

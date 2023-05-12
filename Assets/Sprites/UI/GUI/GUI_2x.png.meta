@@ -3,7 +3,7 @@ guid: 86e81092ff6c69c4a858adbca0587890
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
-  serializedVersion: 11
+  serializedVersion: 12
   mipmaps:
     mipMapMode: 0
     enableMipMap: 1
@@ -63,6 +63,7 @@ TextureImporter:
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 0
+  cookieLightType: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -106,6 +107,18 @@ TextureImporter:
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -399,19 +412,19 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      GUI_2x_7: 2093794404
-      GUI_2x_8: 3537375
-      GUI_2x_4: 1085448865
-      GUI_2x_9: -1122374558
-      GUI_2x_11: -744027857
-      GUI_2x_3: -1643143643
-      GUI_2x_2: 280681504
-      GUI_2x_5: 1448210038
-      GUI_2x_6: -1202653467
+      GUI_2x_0: 344492899
       GUI_2x_1: 180769142
       GUI_2x_10: -1489410660
+      GUI_2x_11: -744027857
       GUI_2x_12: 2078185422
-      GUI_2x_0: 344492899
+      GUI_2x_2: 280681504
+      GUI_2x_3: -1643143643
+      GUI_2x_4: 1085448865
+      GUI_2x_5: 1448210038
+      GUI_2x_6: -1202653467
+      GUI_2x_7: 2093794404
+      GUI_2x_8: 3537375
+      GUI_2x_9: -1122374558
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

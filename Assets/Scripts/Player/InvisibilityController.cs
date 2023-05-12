@@ -1,5 +1,4 @@
 using UnityEngine;
-using TheProphecy.Interfaces;
 
 public class InvisibilityController : MonoBehaviour, ISkill
 {

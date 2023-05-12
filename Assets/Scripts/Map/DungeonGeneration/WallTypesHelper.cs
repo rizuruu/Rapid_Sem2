@@ -2,11 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace TheProphecy.Map.DungeonGeneration
+public static class WallTypesHelper
 {
-    public static class WallTypesHelper
-    {
-        public static HashSet<int> wallTop = new HashSet<int>
+    public static HashSet<int> wallTop = new HashSet<int>
     {
         0b1111,
         0b0110,
@@ -19,22 +17,22 @@ namespace TheProphecy.Map.DungeonGeneration
         0b0111
     };
 
-        public static HashSet<int> wallSideLeft = new HashSet<int>
+    public static HashSet<int> wallSideLeft = new HashSet<int>
     {
         0b0100
     };
 
-        public static HashSet<int> wallSideRight = new HashSet<int>
+    public static HashSet<int> wallSideRight = new HashSet<int>
     {
         0b0001
     };
 
-        public static HashSet<int> wallBottom = new HashSet<int>
+    public static HashSet<int> wallBottom = new HashSet<int>
     {
         0b1000
     };
 
-        public static HashSet<int> wallInnerCornerDownLeft = new HashSet<int>
+    public static HashSet<int> wallInnerCornerDownLeft = new HashSet<int>
     {
         0b11110001,
         0b11100000,
@@ -56,7 +54,7 @@ namespace TheProphecy.Map.DungeonGeneration
         0b10010001
     };
 
-        public static HashSet<int> wallInnerCornerDownRight = new HashSet<int>
+    public static HashSet<int> wallInnerCornerDownRight = new HashSet<int>
     {
         0b11000111,
         0b11000011,
@@ -79,29 +77,29 @@ namespace TheProphecy.Map.DungeonGeneration
 
     };
 
-        public static HashSet<int> wallDiagonalCornerDownLeft = new HashSet<int>
+    public static HashSet<int> wallDiagonalCornerDownLeft = new HashSet<int>
     {
         0b01000000
     };
 
-        public static HashSet<int> wallDiagonalCornerDownRight = new HashSet<int>
+    public static HashSet<int> wallDiagonalCornerDownRight = new HashSet<int>
     {
         0b00000001
     };
 
-        public static HashSet<int> wallDiagonalCornerUpLeft = new HashSet<int>
+    public static HashSet<int> wallDiagonalCornerUpLeft = new HashSet<int>
     {
         0b00010000,
         0b01010000,
     };
 
-        public static HashSet<int> wallDiagonalCornerUpRight = new HashSet<int>
+    public static HashSet<int> wallDiagonalCornerUpRight = new HashSet<int>
     {
         0b00000100,
         0b00000101
     };
 
-        public static HashSet<int> wallFull = new HashSet<int>
+    public static HashSet<int> wallFull = new HashSet<int>
     {
         0b1101,
         0b0101,
@@ -110,7 +108,7 @@ namespace TheProphecy.Map.DungeonGeneration
 
     };
 
-        public static HashSet<int> wallFullEightDirections = new HashSet<int>
+    public static HashSet<int> wallFullEightDirections = new HashSet<int>
     {
         0b00010100,
         0b11100100,
@@ -149,12 +147,8 @@ namespace TheProphecy.Map.DungeonGeneration
 
     };
 
-        public static HashSet<int> wallBottmEightDirections = new HashSet<int>
+    public static HashSet<int> wallBottmEightDirections = new HashSet<int>
     {
         0b01000001
     };
-
-    }
 }
-
-

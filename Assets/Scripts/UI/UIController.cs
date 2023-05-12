@@ -1,5 +1,3 @@
-using TheProphecy;
-using TheProphecy.LevelRun;
 using UnityEngine;
 
 public class UIController : MonoBehaviour

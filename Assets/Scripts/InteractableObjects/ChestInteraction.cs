@@ -1,9 +1,5 @@
 using System.Collections;
 using UnityEngine;
-using TheProphecy.LevelRun;
-using TheProphecy.Items;
-using TheProphecy.Interfaces;
-using TheProphecy;
 
 public class ChestInteraction : MonoBehaviour, IInteractable
 {

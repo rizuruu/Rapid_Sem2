@@ -2,8 +2,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
-namespace TheProphecy.Map.DungeonGeneration
-{
     public static class ProceduralGenerationAlgorithms
     {
 
@@ -116,9 +114,9 @@ namespace TheProphecy.Map.DungeonGeneration
 /// <summary>
 /// Start from up goes clockwise
 /// </summary>
-    public static class Direction2D
-    {
-        public static List<Vector2Int> cardinalDirectionsList = new List<Vector2Int>
+public static class Direction2D
+{
+    public static List<Vector2Int> cardinalDirectionsList = new List<Vector2Int>
     {
         new Vector2Int(0,1),    //UP
         new Vector2Int(1,0),    //RIGHT
@@ -126,7 +124,7 @@ namespace TheProphecy.Map.DungeonGeneration
         new Vector2Int(-1,0)    //LEFT
     };
 
-        public static List<Vector2Int> diagonalDirectionsList = new List<Vector2Int>
+    public static List<Vector2Int> diagonalDirectionsList = new List<Vector2Int>
     {
         new Vector2Int(1,1), //UP-RIGHT
         new Vector2Int(1,-1), //RIGHT-DOWN
@@ -134,7 +132,7 @@ namespace TheProphecy.Map.DungeonGeneration
         new Vector2Int(-1, 1) //LEFT-UP
     };
 
-        public static List<Vector2Int> eightDirectionsList = new List<Vector2Int>
+    public static List<Vector2Int> eightDirectionsList = new List<Vector2Int>
     {
         new Vector2Int(0,1), //UP
         new Vector2Int(1,1), //UP-RIGHT
@@ -148,9 +146,8 @@ namespace TheProphecy.Map.DungeonGeneration
     };
 
 
-        public static Vector2Int GetRandomCardinalDirection()
-        {
-            return cardinalDirectionsList.ReturnRandomElement();
-        }
+    public static Vector2Int GetRandomCardinalDirection()
+    {
+        return cardinalDirectionsList.ReturnRandomElement();
     }
 }

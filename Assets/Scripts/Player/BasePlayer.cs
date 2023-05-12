@@ -1,5 +1,4 @@
 using System;
-using TheProphecy.Interfaces;
 using UnityEngine;
 
 public class BasePlayer : BaseUnit, IDamageable
