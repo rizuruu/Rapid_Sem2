@@ -42052,7 +42052,7 @@ GameObject:
   - component: {fileID: 740459120}
   - component: {fileID: 740459121}
   m_Layer: 6
-  m_Name: Character
+  m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
